@@ -1,0 +1,24 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 20px;
+  font-family: Verdana;
+}
+
+article {
+  background-color: #3c3c3c;
+  position: relative;
+  min-height: 169px;
+  padding: 20px;
+  margin-bottom: 20px;
+  padding-right: 340px;
+}
+
+img {
+  position: absolute;
+  right: 20px;
+  width: 300px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  background-color: white;
+}
