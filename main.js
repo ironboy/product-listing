@@ -6,13 +6,13 @@ let products = [
   {
     id: 1,
     name: 'Solglasögon Rayban Wayfarer',
-    price: 850,
+    price: 849.50,
     description: 'Klassika solglasögon burna av bl.a. Roy Orbinson och Bob Dylan.'
   },
   {
     id: 2,
     name: 'Lila Solglasögon för barn',
-    price: 200,
+    price: 199.95,
     description: 'Med dessa coola brillor på näsan blir du trendigast på stranden och får även inbyggd solskydd och polarisering!'
   },
   {
@@ -29,6 +29,11 @@ let products = [
   }
 ];
 
+// Create a new number formatter for our prices
+let numberFormatter = new Intl.NumberFormat(
+  'sv-SE', { style: 'currency', currency: 'SEK' }
+).format;
+
 // We use a for...of-loop to loop through our products
 for (let product of products) {
   // For each product we add some more html to the webpage
@@ -39,7 +44,7 @@ for (let product of products) {
       <img src="images/${product.id}.webp">
       <h2>${product.name}</h2>
       <p>${product.description}</p>
-      <p><strong>Pris:</strong> ${product.price} kr</p>
+      <p><strong>Pris:</strong> ${numberFormatter(product.price)}</p>
     </article>
   `;
 }
